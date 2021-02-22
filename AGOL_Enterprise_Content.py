@@ -53,8 +53,8 @@ def listStringJoiner(inputList, joiner=","):
 
 def findAGOLUserContent(user):
     # users can have multiple folders with content within each folder.
-    # If "else" is invoked users only have a main content
-    # folder and no sub folders
+    # If user.folders length is not greater than 1 then
+    # users only have a main content folder and no sub folders
     AGOLItems = []
     userIndex = emails[emails == user.email].index[0]
     if len(user.folders) > 1:
